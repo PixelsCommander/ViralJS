@@ -1,0 +1,23 @@
+{
+  "name": "viral-js-demo",
+  "version": "1.0.0",
+  "description": "Demonstartion on how ViralJS distributes application over p2p",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p2p",
+    "app",
+    "container"
+  ],
+  "author": "Denis Radin aka PixelsCommander",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.3"
+  },
+  "dependencies": {
+    "socket.io-p2p-server": "^1.2.0",
+    "vivagraphjs": "^0.8.1"
+  }
+}
