@@ -20,5 +20,8 @@
     "socket.io-p2p-server": "^1.2.0",
     "vis": "^4.9.0",
     "vivagraphjs": "^0.8.1"
+  },
+  "scripts": {
+    "start": "nodemon ./server.js"
   }
 }

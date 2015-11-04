@@ -1,7 +1,7 @@
 var express = require('express'),
     Renderer = require('./renderer.js'),
     renderer = new Renderer(),
-    ViralContainer = require('../../src/viral-container.js');
+    ViralContainer = require('../src/viral-container.js');
 
 var express = require('express');
 var app = express();

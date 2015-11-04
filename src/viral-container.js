@@ -54,6 +54,11 @@ class ViralContainer {
 
   middleware(req, res, next) {
     console.log('Middleware worked');
+
+    /* if (req.path.indexOf('favicon.ico')) {
+      next();
+    } */
+
     var peerAvailable = this.getPeerForSocket(req.socket);
 
     if (peerAvailable) {
