@@ -1,4 +1,5 @@
 var sentByData = {};
+var appId = location.href.indexOf('localhost') === -1 ? '1194624743886739' : '1214376798578200';
 
 if (typeof ViralContainer !== 'undefined') {
     console.log('And our meta is...');
@@ -43,7 +44,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function () {
     FB.init({
-        appId: '1194624743886739',
+        appId: appId,
         xfbml: true,
         version: 'v2.4',
         cookie: true

@@ -4,7 +4,7 @@
   "description": "Demonstartion on how ViralJS distributes application over p2p",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./server.js"
   },
   "keywords": [
     "p2p",
@@ -17,11 +17,9 @@
     "express": "^4.13.3"
   },
   "dependencies": {
+    "express-useragent": "^0.2.0",
     "socket.io-p2p-server": "^1.2.0",
     "vis": "^4.9.0",
     "vivagraphjs": "^0.8.1"
-  },
-  "scripts": {
-    "start": "nodemon ./server.js"
   }
 }
