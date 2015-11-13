@@ -16,7 +16,9 @@ var browsersAllowed = {
     'safari': false,
     'edge': false,
     'ie': false
-}
+};
+
+var ICEPort = 8080;
 
 class ViralContainer {
     constructor() {
@@ -28,8 +30,8 @@ class ViralContainer {
 
         this.socket.on('connection', this.onConnection.bind(this));
 
-        this.server.listen(3030, function () {
-            console.log("Viral container socket is listening on 3030");
+        this.server.listen(ICEPort, function () {
+            console.log("Viral container socket is listening on " + ICEPort);
         });
 
         this.middleware = this.middleware.bind(this);
