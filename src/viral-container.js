@@ -18,7 +18,7 @@ var browsersAllowed = {
     'ie': false
 };
 
-var ICEPort = 443;
+var ICEPort = 3030;
 
 class ViralContainer {
     constructor() {
