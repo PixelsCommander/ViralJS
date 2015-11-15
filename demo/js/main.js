@@ -12,7 +12,7 @@ if (typeof ViralContainer !== 'undefined') {
     sentByData = ViralContainer.meta;
 } else {
     sentByData = {
-        name: 'ExpressJS server with ViralJS middleware',
+        name: 'Express server with ViralJS middleware',
         avatar: 'http://publicdomainvectors.org/photos/1313181674.png',
         id: 0
     };
