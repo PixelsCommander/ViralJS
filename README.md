@@ -1,4 +1,4 @@
-ViralJS
+![ViralJS](https://github.com/PixelsCommander/ViralJS/blob/master/figures/logo-small.png?raw=true)
 =======
 
 P2P Web apps ditribution made easy
