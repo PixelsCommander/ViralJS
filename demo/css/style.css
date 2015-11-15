@@ -1,4 +1,13 @@
 html, body {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:
+}
+
+.container {
+    margin: auto;
+    width: 600px;
+    text-align: center;
 }
