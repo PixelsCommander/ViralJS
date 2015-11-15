@@ -33,12 +33,8 @@ Or another case – once application got from USA to Europe it is delivered insi
 
 By distributing application via P2P you create a self-establishing and self-evolving CDN which moves data closer to client.
 
-How does viral JS works?
-------------------------
-![ViralJS algorithm scheme](https://github.com/PixelsCommander/ViralJS/blob/master/figures/viraljs-scheme.png?raw=true)
-
 Installing from NPM
----
+-------------------
 `npm -i viraljs`
 
 How to use?
