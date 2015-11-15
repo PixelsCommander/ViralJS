@@ -34,9 +34,11 @@ Installing from NPM
 How to use?
 -----------
 
-```html var ViralContainer = require('viraljs');
- var viralContainer = new ViralContainer();
- app.use(viralContainer.middleware);```
+```html
+var ViralContainer = require('viraljs');
+var viralContainer = new ViralContainer();
+app.use(viralContainer.middleware);
+```
 
 Bug tracker
 -----------
