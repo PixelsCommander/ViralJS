@@ -1,13 +1,12 @@
 ![ViralJS](https://github.com/PixelsCommander/ViralJS/blob/master/figures/logo-small.png?raw=true)
-=======
 
 P2P Web apps ditribution made easy
-----------------------------------
+==================================
 
 - [Demo](http://pixelscommander.com:3000)
 - [Article about](http://pixelscommander.com/en/interactive-revolution/what-is-beyond-isomorphic/)
 
-Isomorphism blurred the boundaries between server and client. The only difference beetween them at the moment is server\`s ability to deliver application to clients. What if we go further supposing that client can transmit application to others? What if we can erase the boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
+Isomorphism blurred the boundaries between server and client. The only difference between them at the moment is server\`s ability to deliver application to clients. What if we go further supposing that client can transmit application to others? What if we can erase the boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
 
 Motivation
 ----------
