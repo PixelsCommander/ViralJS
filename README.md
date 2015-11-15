@@ -47,7 +47,7 @@ How to use?
 ```html
 var ViralContainer = require('viraljs');
 var viralContainer = new ViralContainer();
-app.use(viralContainer.middleware);
+myExpressApp.use(viralContainer.middleware);
 ```
 
 Bug tracker
