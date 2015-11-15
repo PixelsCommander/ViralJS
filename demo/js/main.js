@@ -1,3 +1,7 @@
+window.onbeforeunload = function(e) {
+    return ('After closing the tab you will stop seeding application to the people near you.');
+}
+
 var sentByData = {};
 var appId = location.href.indexOf('localhost') === -1 ? '1194624743886739' : '1214376798578200';
 
@@ -90,6 +94,10 @@ function testAPI() {
                 a: sentByData,
                 b: thisUserData
             });
+
+            if (sentByData) {
+                alert('You received application from ' + sentByData.name);
+            }
         });
     });
 }
