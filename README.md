@@ -1,6 +1,6 @@
 ![ViralJS](https://github.com/PixelsCommander/ViralJS/blob/master/figures/logo-small.png?raw=true)
 
-P2P Web apps ditribution made easy
+P2P Web apps distribution made easy
 ==================================
 
 [![Join the chat at https://gitter.im/PixelsCommander/ViralJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PixelsCommander/ViralJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
