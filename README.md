@@ -14,12 +14,16 @@ Motivation
 P2P content distribution allows to reduce server load and decrease network latency since peering could be setup in the way content to be delivered from the nearest peer available. For example after hitting corporative network application will be delivered inside of it using high speed internal channels without creating a load on company`s internet channel.
 
 ![Normal distribution](https://github.com/PixelsCommander/ViralJS/blob/master/figures/normal_m.png?raw=true)
+_Traditional app distribution. Server sends package many times, corporative internet channels are loaded appropriately_
 ![P2P distribution](https://github.com/PixelsCommander/ViralJS/blob/master/figures/p2p_m.png?raw=true)
+_In case of P2P distribution application hits corporative network once and then is distributed using hi speed internal network. This reduces server load and corporative internet channel load_
 
 Or another case – once application got from USA to Europe it is delivered inside of European networks only without creating transatlantic traffic.
 
 ![Normal distribution](https://github.com/PixelsCommander/ViralJS/blob/master/figures/normal_world_m.png?raw=true)
+_It takes a lot of transatlantic trips to transmit an app when doing it in a traditional way_
 ![P2P distribution](https://github.com/PixelsCommander/ViralJS/blob/master/figures/p2p_world_m.png?raw=true)
+_P2P allows to reduce number of transcontinental transfers and reduce server load
 
 By distributing application via P2P you create a self-establishing and self-evolving CDN which moves data closer to client.
 
