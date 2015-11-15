@@ -35,8 +35,8 @@ How to use?
 -----------
 
 `var ViralContainer = require('viraljs');
-var viralContainer = new ViralContainer();
-app.use(viralContainer.middleware);`
+ var viralContainer = new ViralContainer();
+ app.use(viralContainer.middleware);`
 
 Bug tracker
 -----------
