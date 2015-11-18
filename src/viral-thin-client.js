@@ -59,7 +59,7 @@ class ViralThinClient {
             }
 
             head.insertBefore(script, head.firstChild);
-            head.removeChild(script);
+            //head.removeChild(script);
           };
 
           // main section of function
