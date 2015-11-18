@@ -49,6 +49,8 @@ function checkLoginState() {
 
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit');
+
+    alert('Starting FB init');
     FB.init({
         appId: appId,
         xfbml: true,
@@ -56,6 +58,7 @@ window.fbAsyncInit = function () {
         cookie: true
     });
 
+    alert('Getting login status');
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
