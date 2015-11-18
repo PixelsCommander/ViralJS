@@ -41,12 +41,14 @@ function statusChangeCallback(response) {
 }
 
 function checkLoginState() {
+    console.log('checkLoginState');
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
 }
 
 window.fbAsyncInit = function () {
+    console.log('fbAsyncInit');
     FB.init({
         appId: appId,
         xfbml: true,
