@@ -85,7 +85,7 @@ class ViralThinClient {
         };
       </script>
       <script>
-        var serverAdress = location.protocol + '//' + location.hostname + ':7000';
+        var serverAdress = location.protocol + '//' + location.hostname + ':3030';
         var recommendedPeerId = '${this.peerSocketId}';
 
         var socket = io(serverAdress);
