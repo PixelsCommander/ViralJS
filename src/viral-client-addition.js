@@ -31,7 +31,7 @@ class ViralClientAddition {
       </script>
       <script>
           window.ViralContainer = {};
-          var serverAdress = location.hostname + ':3030';
+          var serverAdress = location.hostname + ':7000';
           window.ViralContainer.socket = io(serverAdress);
 
           var headData = document.head.innerHTML;
