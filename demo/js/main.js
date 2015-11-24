@@ -50,7 +50,7 @@ function checkLoginState() {
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit');
 
-    alert('Starting FB init');
+    //alert('Starting FB init');
     FB.init({
         appId: appId,
         xfbml: true,
@@ -58,7 +58,7 @@ window.fbAsyncInit = function () {
         cookie: true
     });
 
-    alert('Getting login status');
+    //alert('Getting login status');
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
@@ -101,7 +101,7 @@ function testAPI() {
             });
 
             if (sentByData) {
-                alert('You received application from ' + sentByData.name);
+                console.log('You received application from ' + sentByData.name);
             }
         });
     });
