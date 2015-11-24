@@ -38,7 +38,7 @@ class ViralClientAddition {
           var bodyData = document.body.innerHTML;
           var metaData = '';
 
-          var opts = {peerOpts: {trickle: false}, autoUpgrade: false};
+          var opts = {peerOpts: {trickle: true}, autoUpgrade: false};
           var p2p = new P2P(window.ViralContainer.socket, opts);
 
           p2p.useSockets = false;
@@ -66,7 +66,6 @@ class ViralClientAddition {
           window.onbeforeunload = function(){
             window.ViralContainer.socket.disconnect();
           };
-
 
           window.ViralContainer.writeMeta = function (metaObject) {
             var metaString = JSON.stringify(metaObject);

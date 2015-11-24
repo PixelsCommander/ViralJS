@@ -88,6 +88,8 @@ class ViralThinClient {
         var serverAdress = location.protocol + '//' + location.hostname + ':7000';
         var recommendedPeerId = '${this.peerSocketId}';
 
+        console.log('Requesting app from ' + recommendedPeerId);
+
         var socket = io(serverAdress);
         //socket.join(recommendedPeerId);
 
