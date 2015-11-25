@@ -59,6 +59,7 @@ class ViralClientAddition {
           }
 
           p2p.on('getApp', function(data){
+            console.log('');
             sendData(metaData + headData, 'head');
             sendData(bodyData, 'body');
           });

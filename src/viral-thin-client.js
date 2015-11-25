@@ -96,6 +96,17 @@ class ViralThinClient {
         var receivedBodyChunks = [];
         var receivedHeadChunks = [];
 
+        var bodyReceived = false;
+        var headReceived = false;
+
+        var allReceived = function() {
+          if (bodyReceived && headReceived) {
+            socket.disconnect();
+            executeScripts(document.head);
+            executeScripts(document.body);
+          }
+        }
+
         var opts = {peerOpts: {trickle: false}, autoUpgrade: false};
         var p2p = new P2P(socket, opts, function (data) {
           p2p.emit('getApp', recommendedPeerId);
@@ -104,9 +115,9 @@ class ViralThinClient {
             if (data !== 'end') {
               receivedBodyChunks.push(data);
             } else {
-              socket.disconnect();
+              bodyReceived = true;
               document.body.innerHTML = receivedBodyChunks.join('');
-              executeScripts(document.body);
+              allReceived();
             }
           });
 
@@ -114,9 +125,9 @@ class ViralThinClient {
             if (data !== 'end') {
               receivedHeadChunks.push(data);
             } else {
-              socket.disconnect();
+              headReceived = true;
               document.head.innerHTML = receivedHeadChunks.join('');
-              executeScripts(document.head);
+              allReceived();
             }
           });
         });
