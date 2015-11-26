@@ -16,10 +16,10 @@ viralContainer.socket.on('connection', function(socket){
         console.log('Sending connections to ' + socket.id);
         socket.emit('connectionsGraph', connections);
     });
-    socket.on('disconnect', function(msg){
+    /*socket.on('disconnect', function(msg){
         delete(connections[socket.id]);
         console.log('Sending connections to ' + socket.id);
-    });
+    });*/
 });
 
 app.use(viralContainer.middleware);
