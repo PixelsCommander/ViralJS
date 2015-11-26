@@ -130,6 +130,8 @@ class ViralThinClient {
               allReceived();
             }
           });
+
+          socket.disconnect();
         });
 
         window.onbeforeunload = function(){
