@@ -13,6 +13,9 @@
     "viral",
     "javascript"
   ],
+  "scripts": {
+    "demo": "cd ./demo/ && nodemon --watch ./ --watch ../src/ ./server.js"
+  },
   "author": "Denis Radin aka PixelsCommander",
   "license": "ISC",
   "dependencies": {
