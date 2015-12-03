@@ -3,8 +3,8 @@
 var http = require('http'),
     p2p = require('socket.io-p2p-server'),
     socketio = require('socket.io'),
-    ViralThinClient = require('./viral-thin-client.js'),
-    ViralClientAddition = require('./viral-client-addition.js'),
+    ViralThinClient = require('./thin-client.js'),
+    ViralClientAddition = require('./viral-addition.js'),
     inline = require('inline-source'),
     fs = require('fs'),
     path = require('path'),
@@ -38,19 +38,23 @@ class ViralContainer {
     }
 
     onConnection(socket) {
-        console.log('Connected #' + this.peers.length + ', ID ' + socket.id + ', adress ' + socket.request.connection.remoteAddress);
+        console.log('Connected ID ' + socket.id + ', adress ' + socket.request.connection.remoteAddress);
         //socket.join(socket.id);
-        this.peers.push(socket);
         socket.on('disconnect', this.onDisconnection.bind(this, socket));
         socket.on('error', this.onDisconnection.bind(this, socket));
+        socket.on('readyToSeed', this.onPeerReady.bind(this, socket));
+    }
+
+    onPeerReady(socket) {
+        console.log('Ready to seed #' + this.peers.length + ', ID ' + socket.id + ', adress ' + socket.request.connection.remoteAddress);
+        this.peers.push(socket);
     }
 
     onDisconnection(socket) {
         var peerIndex = this.peers.indexOf(socket);
 
-        console.log('Disconnected ' + peerIndex);
-
         if (peerIndex !== -1) {
+            console.log('Disconnected ' + peerIndex);
             this.peers.splice(peerIndex, 1);
         }
     }
