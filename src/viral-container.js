@@ -8,7 +8,8 @@ var http = require('http'),
     inline = require('inline-source'),
     fs = require('fs'),
     path = require('path'),
-    useragent = require('express-useragent');
+    useragent = require('express-useragent'),
+    config = require('./config.js');
 
 var browsersAllowed = {
     'chrome': true,
@@ -17,8 +18,6 @@ var browsersAllowed = {
     'edge': false,
     'ie': false
 };
-
-var ICEPort = 7000;
 
 class ViralContainer {
     constructor() {
@@ -30,8 +29,8 @@ class ViralContainer {
 
         this.socket.on('connection', this.onConnection.bind(this));
 
-        this.server.listen(ICEPort, function () {
-            console.log("Viral container socket is listening on " + ICEPort);
+        this.server.listen(config.port, function () {
+            console.log("Viral container socket is listening on " + config.port);
         });
 
         this.middleware = this.middleware.bind(this);

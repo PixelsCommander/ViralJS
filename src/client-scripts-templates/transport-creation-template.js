@@ -1,3 +1,4 @@
+var config = require('../config.js');
 var jsReader = require('../utils/js-reader.js');
 var p2pScriptContent = jsReader.get('../../node_modules/socket.io-p2p/socketiop2p.min.js');
 var ioScriptContent = jsReader.get('../../node_modules/socket.io-client/socket.io.js');
@@ -14,8 +15,8 @@ module.exports = function(){
     </script>
     <script>
     window.ViralContainer = window.ViralContainer || {};
-    var serverAdress = location.protocol + '//' + location.hostname + ':7000';
+    var serverAdress = location.protocol + '//' + location.hostname + ':${config.port}';
     window.ViralContainer.socket = window.ViralContainer.socket || io(serverAdress);
-    var opts = {peerOpts: {trickle: false}, autoUpgrade: false};
+    var opts = {peerOpts: {trickle: ${config.trickle}, autoUpgrade: false};
     `;
 };
