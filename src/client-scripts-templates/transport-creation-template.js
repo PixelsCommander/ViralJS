@@ -17,6 +17,6 @@ module.exports = function(){
     window.ViralContainer = window.ViralContainer || {};
     var serverAdress = location.protocol + '//' + location.hostname + ':${config.port}';
     window.ViralContainer.socket = window.ViralContainer.socket || io(serverAdress);
-    var opts = {peerOpts: {trickle: ${config.trickle}, autoUpgrade: false};
+    var opts = {peerOpts: {trickle: ${config.trickle}, autoUpgrade: false}};
     `;
 };
