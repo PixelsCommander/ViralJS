@@ -26,7 +26,6 @@ module.exports = function (recommendedPeerId) {
         }
     }
 
-    var opts = {peerOpts: {trickle: true}, autoUpgrade: false};
     var p2p = window.ViralContainer.p2p = new P2P(window.ViralContainer.socket, opts, function (data) {
         p2p.emit('getApp', recommendedPeerId);
 

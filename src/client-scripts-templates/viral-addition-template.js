@@ -7,7 +7,6 @@ module.exports = function (p2pScriptContent, ioScriptContent) {
     var bodyData = document.body.innerHTML;
     var metaData = '';
 
-    var opts = {peerOpts: {trickle: true}, autoUpgrade: false};
     window.ViralContainer.p2p = window.ViralContainer.p2p || new P2P(window.ViralContainer.socket, opts);
 
     window.ViralContainer.p2p.useSockets = false;

@@ -16,5 +16,6 @@ module.exports = function(){
     window.ViralContainer = window.ViralContainer || {};
     var serverAdress = location.protocol + '//' + location.hostname + ':7000';
     window.ViralContainer.socket = window.ViralContainer.socket || io(serverAdress);
+    var opts = {peerOpts: {trickle: false}, autoUpgrade: false};
     `;
 };
