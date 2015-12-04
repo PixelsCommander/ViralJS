@@ -48,7 +48,7 @@ function checkLoginState() {
 }
 
 window.fbAsyncInit = function () {
-    console.log('fbAsyncInit');
+    console.log('fbAsyncInit ' + appId);
 
     //alert('Starting FB init');
     FB.init({
