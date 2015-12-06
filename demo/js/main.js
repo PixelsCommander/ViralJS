@@ -59,9 +59,9 @@ window.fbAsyncInit = function () {
     });
 
     //alert('Getting login status');
-    FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-    });
+
+    setTimeout('FB.getLoginStatus(function (response) {statusChangeCallback(response);});', 300);
+
 };
 
 (function (d, s, id) {
