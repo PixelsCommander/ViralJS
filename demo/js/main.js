@@ -51,6 +51,7 @@ window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
 
     //alert('Starting FB init');
+    debugger;
     FB.init({
         appId: appId,
         xfbml: true,

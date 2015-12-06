@@ -37,14 +37,23 @@ class ViralContainer {
     }
 
     onConnection(socket) {
+        /*var recommendedPeer = this.getPeerForSocket(socket);
+        var recommendedPeerId = recommendedPeer ? recommendedPeer.id : null;
+        console.log('Joining socket ' + socket.id + ' to room ' + recommendedPeerId);
+
+        if (recommendedPeerId) {
+            socket.join(recommendedPeerId);
+        }*/
+
         console.log('Connected ID ' + socket.id + ', adress ' + socket.request.connection.remoteAddress);
-        //socket.join(socket.id);
         socket.on('disconnect', this.onDisconnection.bind(this, socket));
         socket.on('error', this.onDisconnection.bind(this, socket));
         socket.on('readyToSeed', this.onPeerReady.bind(this, socket));
     }
 
     onPeerReady(socket) {
+        //console.log('Joining socket ' + socket.id + ' to it`s own room');
+        //socket.join(socket.id);
         console.log('Ready to seed #' + this.peers.length + ', ID ' + socket.id + ', adress ' + socket.request.connection.remoteAddress);
         this.peers.push(socket);
     }

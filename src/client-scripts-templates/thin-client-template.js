@@ -10,8 +10,6 @@ module.exports = function (recommendedPeerId) {
 
     console.log('Requesting app from ' + recommendedPeerId);
 
-    //window.ViralContainer.socket.join(recommendedPeerId);
-
     var receivedBodyChunks = [];
     var receivedHeadChunks = [];
 
@@ -24,6 +22,12 @@ module.exports = function (recommendedPeerId) {
             executeScripts(document.body);
             var evt = document.createEvent('Event');
             evt.initEvent('load', false, false);
+
+            /* Object.keys(window.ViralContainer.p2p._peers).forEach(function(peerId){
+                var peer = window.ViralContainer.p2p._peers[peerId];
+                peer.destroy();
+            }); */
+
             window.dispatchEvent(evt);
         }
     }
