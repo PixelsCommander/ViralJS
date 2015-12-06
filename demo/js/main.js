@@ -49,7 +49,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
-
+    FB.XFBML.parse();
     FB.init({
         appId: appId,
         xfbml: true,
