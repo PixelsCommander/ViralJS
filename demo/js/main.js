@@ -92,6 +92,7 @@ function testAPI() {
             ViralContainer.writeMeta(thisUserData);
 
             ViralContainer.socket.on('connectionsGraph', function (data) {
+                console.log('Received graph data');
                 drawGraph(data);
             });
 

@@ -14,7 +14,7 @@ viralContainer.socket.on('connection', function(socket){
     socket.on('addConnection', function(msg){
         connections[socket.id] = msg;
         console.log('Sending connections to ' + socket.id);
-        socket.emit('connectionsGraph', connections);
+        viralContainer.socket.emit('connectionsGraph', connections);
     });
     /*socket.on('disconnect', function(msg){
         delete(connections[socket.id]);
