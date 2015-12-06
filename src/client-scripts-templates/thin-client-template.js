@@ -20,9 +20,11 @@ module.exports = function (recommendedPeerId) {
 
     var allReceived = function() {
         if (bodyReceived && headReceived) {
-            //window.ViralContainer.socket.disconnect();
             executeScripts(document.head);
             executeScripts(document.body);
+            var evt = document.createEvent('Event');
+            evt.initEvent('load', false, false);
+            window.dispatchEvent(evt);
         }
     }
 
@@ -52,8 +54,6 @@ module.exports = function (recommendedPeerId) {
                 allReceived();
             }
         });
-
-        //window.ViralContainer.socket.disconnect();
     });
 
     window.onbeforeunload = function(){
