@@ -49,13 +49,15 @@ function checkLoginState() {
 
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
-    FB.XFBML.parse();
+
     FB.init({
         appId: appId,
         xfbml: true,
         version: 'v2.4',
         cookie: true
     });
+
+    FB.XFBML.parse();
 
     debugger;
     FB.getLoginStatus(function (response) {
