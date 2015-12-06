@@ -51,16 +51,11 @@ window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
 
     //alert('Starting FB init');
-    FB.init({
-        appId: appId,
-        xfbml: true,
-        version: 'v2.4',
-        cookie: true
-    });
+
 
     //alert('Getting login status');
 
-    setTimeout('FB.getLoginStatus(function (response) {statusChangeCallback(response);});', 300);
+    setTimeout('FB.init({appId: appId,xfbml: true,version: "v2.4",cookie: true});FB.getLoginStatus(function (response) {statusChangeCallback(response);});', 300);
 
 };
 
