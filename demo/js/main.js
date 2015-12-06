@@ -59,7 +59,6 @@ window.fbAsyncInit = function () {
 
     FB.XFBML.parse();
 
-    debugger;
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
