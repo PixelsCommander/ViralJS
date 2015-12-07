@@ -4,7 +4,7 @@
   "description": "P2P distributed application made easy",
   "main": "./src/virus-container.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "demo": "cd ./demo/ && nodemon --watch ./ --watch ../src/ ./server.js"
   },
   "keywords": [
     "p2p",
@@ -13,14 +13,12 @@
     "viral",
     "javascript"
   ],
-  "scripts": {
-    "demo": "cd ./demo/ && nodemon --watch ./ --watch ../src/ ./server.js"
-  },
   "author": "Denis Radin aka PixelsCommander",
   "license": "ISC",
   "dependencies": {
     "express-useragent": "^0.2.0",
     "inline-source": "4.1.0",
+    "mongoose": "^4.2.9",
     "socket.io": "^1.3.7",
     "socket.io-client": "^1.3.7",
     "socket.io-p2p": "^2.1.1",
