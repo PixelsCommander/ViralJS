@@ -18,10 +18,12 @@ module.exports = function (recommendedPeerId) {
 
     var allReceived = function() {
         if (bodyReceived && headReceived) {
-            executeScripts(document.head);
+
             executeScripts(document.body);
 
+
             setTimeout(function(){
+              executeScripts(document.head);
               var evt = document.createEvent('Event');
               evt.initEvent('load', false, false);
               window.dispatchEvent(evt);

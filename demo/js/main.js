@@ -19,8 +19,6 @@ if (typeof ViralContainer !== 'undefined') {
 }
 
 function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
@@ -50,9 +48,6 @@ function checkLoginState() {
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
 
-    FB.XFBML.parse();
-
-    debugger;
     FB.init({
         appId: appId,
         xfbml: true,
@@ -61,11 +56,11 @@ window.fbAsyncInit = function () {
         status: true
     });
 
+    debugger;
+
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
-
-    setTimeout(FB.XFBML.parse, 500);
 };
 
 (function (d, s, id) {
