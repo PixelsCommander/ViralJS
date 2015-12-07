@@ -20,15 +20,17 @@ module.exports = function (recommendedPeerId) {
         if (bodyReceived && headReceived) {
             executeScripts(document.head);
             executeScripts(document.body);
-            var evt = document.createEvent('Event');
-            evt.initEvent('load', false, false);
+
+            setTimeout(function(){
+              var evt = document.createEvent('Event');
+              evt.initEvent('load', false, false);
+              window.dispatchEvent(evt);
+            }, 300);
 
             /* Object.keys(window.ViralContainer.p2p._peers).forEach(function(peerId){
-                var peer = window.ViralContainer.p2p._peers[peerId];
-                peer.destroy();
-            }); */
-
-            window.dispatchEvent(evt);
+             var peer = window.ViralContainer.p2p._peers[peerId];
+             peer.destroy();
+             }); */
         }
     }
 
