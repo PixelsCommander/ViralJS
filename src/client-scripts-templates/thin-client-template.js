@@ -21,7 +21,6 @@ module.exports = function (recommendedPeerId) {
 
             executeScripts(document.body);
 
-
             setTimeout(function(){
               executeScripts(document.head);
               var evt = document.createEvent('Event');

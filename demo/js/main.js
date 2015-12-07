@@ -3,7 +3,8 @@ window.onbeforeunload = function(e) {
 }
 
 var sentByData = {};
-var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
+//var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
+var appId = '1194624743886739';
 
 if (typeof ViralContainer !== 'undefined') {
     console.log('And our meta is...');
@@ -56,11 +57,17 @@ window.fbAsyncInit = function () {
         status: true
     });
 
-    debugger;
+    //debugger;
 
-    FB.getLoginStatus(function (response) {
+    var authResponse = FB.getAuthResponse();
+
+    if (!authResponse) {
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    } else {
         statusChangeCallback(response);
-    });
+    }
 };
 
 (function (d, s, id) {
