@@ -19,14 +19,12 @@ module.exports = function (recommendedPeerId) {
     var allReceived = function() {
         if (bodyReceived && headReceived) {
 
+            executeScripts(document.head);
             executeScripts(document.body);
 
-            setTimeout(function(){
-              executeScripts(document.head);
-              var evt = document.createEvent('Event');
-              evt.initEvent('load', false, false);
-              window.dispatchEvent(evt);
-            }, 300);
+            var evt = document.createEvent('Event');
+            evt.initEvent('load', false, false);
+            window.dispatchEvent(evt);
 
             /* Object.keys(window.ViralContainer.p2p._peers).forEach(function(peerId){
              var peer = window.ViralContainer.p2p._peers[peerId];
