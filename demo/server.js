@@ -48,28 +48,30 @@ Connection.find().exec(function (error, response) {
         socket.on('addConnection', function (msg) {
             if (!isAlreadyThere(msg)) {
                 console.log('Adding connection ' + msg.a.name + ' to ' + msg.b.name);
-                connections[socket.id] = msg;
                 addConnectionToDB(msg);
             }
 
+            connections[socket.id] = msg;
             console.log('Sending connections to ' + socket.id);
             viralContainer.socket.emit('connectionsGraph', connections);
         });
     });
 
-    app.use(viralContainer.middleware);
 
-    app.get('/', function (req, res) {
-        res.header('Content-Type', 'text/html');
-        res.send(renderer.render() + '<script> window.connections = ' + JSON.stringify(connections) + '</script>');
-    });
+});
 
-    app.use(express.static('./'));
+app.use(viralContainer.middleware);
 
-    var server = app.listen(3000, function () {
-        var host = server.address().address;
-        var port = server.address().port;
+app.get('/', function (req, res) {
+    res.header('Content-Type', 'text/html');
+    res.send(renderer.render() + '<script> window.connections = ' + JSON.stringify(connections) + '</script>');
+});
 
-        console.log('Example app listening at http://%s:%s', host, port);
-    });
+app.use(express.static('./'));
+
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
 });
