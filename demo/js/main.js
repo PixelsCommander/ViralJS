@@ -50,12 +50,15 @@ function checkLoginState() {
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
 
+    FB.XFBML.parse();
+
     debugger;
     FB.init({
         appId: appId,
         xfbml: true,
         version: 'v2.4',
-        cookie: true
+        cookie: true,
+        status: true
     });
 
     FB.getLoginStatus(function (response) {
@@ -72,7 +75,7 @@ window.fbAsyncInit = function () {
     }
     js = d.createElement(s);
     js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
