@@ -28,8 +28,6 @@ function isAlreadyThere(connectionData) {
         if (connectionToCheck.a.name === connectionData.a.name && connectionToCheck.b.name === connectionData.b.name) {
             return true;
         }
-        console.log(connectionToCheck.a.name + ' !== ' + connectionData.a.name);
-        console.log(connectionToCheck.b.name + ' !== ' + connectionData.b.name);
     }
 
     return false;
@@ -45,33 +43,33 @@ Connection.find().exec(function (error, response) {
     response.forEach(function (connection) {
         connections[Math.random()] = JSON.parse(connection.data);
     });
-});
 
-viralContainer.socket.on('connection', function (socket) {
-    socket.on('addConnection', function (msg) {
-        if (!isAlreadyThere(msg)) {
-            console.log('Adding connection ' + msg.a.name + ' to ' + msg.b.name);
-            connections[socket.id] = msg;
-            addConnectionToDB(msg);
-        }
+    viralContainer.socket.on('connection', function (socket) {
+        socket.on('addConnection', function (msg) {
+            if (!isAlreadyThere(msg)) {
+                console.log('Adding connection ' + msg.a.name + ' to ' + msg.b.name);
+                connections[socket.id] = msg;
+                addConnectionToDB(msg);
+            }
 
-        console.log('Sending connections to ' + socket.id);
-        viralContainer.socket.emit('connectionsGraph', connections);
+            console.log('Sending connections to ' + socket.id);
+            viralContainer.socket.emit('connectionsGraph', connections);
+        });
     });
-});
 
-app.use(viralContainer.middleware);
+    app.use(viralContainer.middleware);
 
-app.get('/', function (req, res) {
-    res.header('Content-Type', 'text/html');
-    res.send(renderer.render() + '<script> window.connections = ' + JSON.stringify(connections) + '</script>');
-});
+    app.get('/', function (req, res) {
+        res.header('Content-Type', 'text/html');
+        res.send(renderer.render() + '<script> window.connections = ' + JSON.stringify(connections) + '</script>');
+    });
 
-app.use(express.static('./'));
+    app.use(express.static('./'));
 
-var server = app.listen(3000, function () {
-    var host = server.address().address;
-    var port = server.address().port;
+    var server = app.listen(3000, function () {
+        var host = server.address().address;
+        var port = server.address().port;
 
-    console.log('Example app listening at http://%s:%s', host, port);
+        console.log('Example app listening at http://%s:%s', host, port);
+    });
 });
