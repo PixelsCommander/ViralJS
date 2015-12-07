@@ -60,7 +60,7 @@ window.fbAsyncInit = function () {
 
     //debugger;
 
-    var timeoutId = setTimeout(testAPI, 1000);
+    var timeoutId = setTimeout(testAPI, 3000);
 
     FB.getLoginStatus(function (response) {
         clearTimeout(timeoutId);
