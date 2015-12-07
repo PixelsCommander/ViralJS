@@ -53,7 +53,7 @@ window.fbAsyncInit = function () {
         appId: appId,
         xfbml: true,
         version: 'v2.4',
-        cookie: true,
+        cookie: false,
         status: true,
         oauth: true
     });
