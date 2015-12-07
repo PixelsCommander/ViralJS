@@ -60,15 +60,13 @@ window.fbAsyncInit = function () {
 
     //debugger;
 
-    var authResponse = FB.getAuthResponse();
+    var timeoutId = setTimeout(testAPI, 1000);
 
-    if (!authResponse) {
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-    } else {
+    FB.getLoginStatus(function (response) {
+        clearTimeout(timeoutId);
         statusChangeCallback(response);
-    }
+    });
+
 };
 
 (function (d, s, id) {
