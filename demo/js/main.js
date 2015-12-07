@@ -3,8 +3,8 @@ window.onbeforeunload = function(e) {
 }
 
 var sentByData = {};
-var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
-//var appId = '1194624743886739';
+//var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
+var appId = '1194624743886739';
 
 if (typeof ViralContainer !== 'undefined') {
     console.log('And our meta is...');
