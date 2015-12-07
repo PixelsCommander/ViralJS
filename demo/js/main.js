@@ -57,11 +57,11 @@ window.fbAsyncInit = function () {
         cookie: true
     });
 
-    FB.XFBML.parse();
-
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
+
+    setTimeout(FB.XFBML.parse, 500);
 };
 
 (function (d, s, id) {

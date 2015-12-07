@@ -60,9 +60,9 @@ module.exports = function (recommendedPeerId) {
         });
     });
 
-    window.onbeforeunload = function(){
+    window.addEventListener('beforeunload', function(){
         window.ViralContainer.socket.disconnect();
-    };
+    });
 
     window.ViralContainer.p2p.useSockets = false;
     window.ViralContainer.p2p.upgrade();
