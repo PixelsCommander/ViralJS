@@ -3,7 +3,8 @@ window.onbeforeunload = function(e) {
 }
 
 var sentByData = {};
-var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
+//var appId = location.href.indexOf('localhost') !== -1 ? '1214376798578200' : '1194624743886739';
+var appId = '1194624743886739';
 
 if (typeof ViralContainer !== 'undefined') {
     console.log('And our meta is...');
@@ -19,8 +20,6 @@ if (typeof ViralContainer !== 'undefined') {
 }
 
 function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
@@ -50,20 +49,22 @@ function checkLoginState() {
 window.fbAsyncInit = function () {
     console.log('fbAsyncInit ' + appId);
 
-    debugger;
     FB.init({
         appId: appId,
         xfbml: true,
-        version: 'v2.4',
+        version: 'v2.2',
         cookie: true
     });
 
-    FB.XFBML.parse();
+    //debugger;
 
-    debugger;
+    var timeoutId = setTimeout(testAPI, 3000);
+
     FB.getLoginStatus(function (response) {
+        clearTimeout(timeoutId);
         statusChangeCallback(response);
     });
+
 };
 
 (function (d, s, id) {
@@ -73,7 +74,7 @@ window.fbAsyncInit = function () {
     }
     js = d.createElement(s);
     js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
