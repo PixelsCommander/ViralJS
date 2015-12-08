@@ -29,8 +29,8 @@ function isAlreadyThere(connectionData) {
             return true;
         }
 
-        console.log(connectionToCheck.a.name + ' !== ' + connectionData.a.name);
-        console.log(connectionToCheck.b.name + ' !== ' + connectionData.b.name);
+        //console.log(connectionToCheck.a.name + ' !== ' + connectionData.a.name);
+        //console.log(connectionToCheck.b.name + ' !== ' + connectionData.b.name);
     }
 
     return false;
