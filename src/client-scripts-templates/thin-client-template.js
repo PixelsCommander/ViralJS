@@ -10,6 +10,10 @@ module.exports = function (recommendedPeerId) {
 
     console.log('Requesting app from ' + recommendedPeerId);
 
+    var timeout = setTimeout(function(){
+        location.href = location.href + '?forceDirect=true';
+    }, 5000);
+
     var receivedBodyChunks = [];
     var receivedHeadChunks = [];
 
@@ -17,6 +21,8 @@ module.exports = function (recommendedPeerId) {
     var headReceived = false;
 
     var allReceived = function() {
+        clearTimeout(timeout);
+
         if (bodyReceived && headReceived) {
 
             executeScripts(document.head);

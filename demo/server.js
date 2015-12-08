@@ -28,6 +28,9 @@ function isAlreadyThere(connectionData) {
         if (connectionToCheck.a.name === connectionData.a.name && connectionToCheck.b.name === connectionData.b.name) {
             return true;
         }
+
+        console.log(connectionToCheck.a.name + ' !== ' + connectionData.a.name);
+        console.log(connectionToCheck.b.name + ' !== ' + connectionData.b.name);
     }
 
     return false;
@@ -49,9 +52,9 @@ Connection.find().exec(function (error, response) {
             if (!isAlreadyThere(msg)) {
                 console.log('Adding connection ' + msg.a.name + ' to ' + msg.b.name);
                 addConnectionToDB(msg);
+                connections[socket.id] = msg;
             }
 
-            connections[socket.id] = msg;
             console.log('Sending connections to ' + socket.id);
             viralContainer.socket.emit('connectionsGraph', connections);
         });

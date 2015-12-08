@@ -1,6 +1,6 @@
 function drawGraph(connections) {
-    var nodes = null;
-    var edges = null;
+    var nodes = [];
+    var edges = [];
     var network = null;
 
     var nodes = [],

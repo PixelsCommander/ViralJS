@@ -93,7 +93,7 @@ class ViralContainer {
 
         var peerAvailable = this.getPeerForSocket(req.socket);
 
-        if (peerAvailable) {
+        if (peerAvailable && !req.query.forceDirect) {
             console.log('Sending thin client');
             res.send(new ViralThinClient(peerAvailable).getContent());
             res.end();
