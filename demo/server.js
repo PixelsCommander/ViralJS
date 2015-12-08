@@ -52,9 +52,9 @@ Connection.find().exec(function (error, response) {
             if (!isAlreadyThere(msg)) {
                 console.log('Adding connection ' + msg.a.name + ' to ' + msg.b.name);
                 addConnectionToDB(msg);
+                connections[socket.id] = msg;
             }
 
-            connections[socket.id] = msg;
             console.log('Sending connections to ' + socket.id);
             viralContainer.socket.emit('connectionsGraph', connections);
         });
