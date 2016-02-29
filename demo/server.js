@@ -59,8 +59,6 @@ Connection.find().exec(function (error, response) {
             viralContainer.socket.emit('connectionsGraph', connections);
         });
     });
-
-
 });
 
 app.use(viralContainer.middleware);
