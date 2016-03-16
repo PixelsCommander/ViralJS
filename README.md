@@ -8,7 +8,7 @@ P2P Web apps distribution made easy
 Isomorphism blurred boundaries between server and client. The only difference between them at the moment is server\`s ability to deliver application to clients. What if we go further supposing that client can transmit application to others? What if we erase boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
 
 - [Demo](http://pixelscommander.com:3000)
-- [Website](http://nataliia-radina.github.io/Viral.JS)
+- [Website](http://pixelscommander.github.io/Viral.JS/)
 - [Article about](http://pixelscommander.com/en/interactive-revolution/what-is-beyond-isomorphic/)
 
 Motivation
