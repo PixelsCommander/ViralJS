@@ -3,6 +3,8 @@
 ExpressJS middleware for P2P Web apps distribution
 ==================================================
 
+[![Join the chat at https://gitter.im/PixelsCommander/ViralJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PixelsCommander/ViralJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - [Demo](http://pixelscommander.com:3000)
 - [Website](http://pixelscommander.github.io/Viral.JS/)
 - [Article about](http://pixelscommander.com/en/interactive-revolution/what-is-beyond-isomorphic/)
@@ -19,8 +21,6 @@ var ViralContainer = require('viraljs');
 var viralContainer = new ViralContainer();
 myExpressApp.use(viralContainer.middleware);
 ```
-
-[![Join the chat at https://gitter.im/PixelsCommander/ViralJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PixelsCommander/ViralJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Isomorphism blurred boundaries between server and client. The only difference between them at the moment is server\`s ability to deliver application to clients. What if we go further supposing that client can transmit application to others? What if we erase boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
 
