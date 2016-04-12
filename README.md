@@ -22,7 +22,7 @@ var viralContainer = new ViralContainer();
 myExpressApp.use(viralContainer.middleware);
 ```
 
-Isomorphism blurred boundaries between server and client. The only difference between them at the moment is server\`s ability to deliver application to clients. What if we go further supposing that client can transmit application to others? What if we erase boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
+Isomorphism blurred boundaries between server and client. The only difference between them currently is server\`s ability to distribute application to clients. What if we go further enabling client to do this? What if we erase boundaries between server and client completely? In this case every client which got application\`s code becomes it`s distributor or carrier. And drawing the analogy with spreading microorganisms in the nature this technique perfectly matches “**viral JavaScript**“ naming.
 
 Motivation
 ----------
