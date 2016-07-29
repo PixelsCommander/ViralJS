@@ -17,7 +17,7 @@ Installing from NPM
 How to use?
 -----------
 
-```html
+```js
 var ViralContainer = require('viraljs');
 var viralContainer = new ViralContainer();
 myExpressApp.use(viralContainer.middleware);
