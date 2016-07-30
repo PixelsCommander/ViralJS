@@ -102,7 +102,7 @@ class ViralContainer {
             res.__send = res.send;
             res.send = function (data) {
                 data += new ViralClientAddition(req).getContent();
-                inline(data, {compress: true, attribute: '*'}, function (err, html) {
+                inline(data, {compress: false, attribute: '*'}, function (err, html) {
                     res.__send(html);
                     res.end();
                 });
