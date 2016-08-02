@@ -2,7 +2,7 @@
 
 ExpressJS middleware for P2P Web apps distribution
 ==================================================
-To reduce server load, latency and establish self-maintainable CDN with your users browsers as nodes.
+To reduce server load, latency and establish self-maintainable CDN based on your users browsers.
 
 [![Join the chat at https://gitter.im/PixelsCommander/ViralJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PixelsCommander/ViralJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
