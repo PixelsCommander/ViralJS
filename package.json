@@ -2,7 +2,7 @@
   "name": "viraljs",
   "version": "0.1.1",
   "description": "P2P distributed application made easy",
-  "main": "./src/viral-container.js",
+  "main": "./src/virus-container.js",
   "scripts": {
     "demo": "cd ./demo/ && nodemon --watch ./ --watch ../src/ ./server.js"
   },
